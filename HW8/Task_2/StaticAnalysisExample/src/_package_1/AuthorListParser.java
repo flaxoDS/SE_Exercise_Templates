@@ -25,7 +25,7 @@ public class AuthorListParser {
     private final static Set<String> AVOID_TERMS_IN_LOWER_CASE = Set.of(
             "jr", "sr", "jnr", "snr", "von", "zu", "van", "der");
 
-    private static final int TOKEN_GROUP_LENGTH = 4; // number of entries for a token
+    private static final int TOKENGROUPLENGTH = 4; // number of entries for a token
 
     // the following are offsets of an entry in a group of entries for one token
     private static final int offsettoken = 0; // String -- token itself;
@@ -34,7 +34,7 @@ public class AuthorListParser {
 
     private static final int offsettikenname = 2; 
     
-    private static final int offsettokenset = 3;
+    private static final int offsettokenlength = 3;
     
     // Character -- token terminator (either " " or
     // "-") comma)
@@ -190,6 +190,7 @@ public class AuthorListParser {
                     } else if (commaSecond < 0) {
                         commaSecond = tokens.size();
                     }
+                    
          
                 case WORD:
                     tokens.add(original.substring(ts, tokenEnd));

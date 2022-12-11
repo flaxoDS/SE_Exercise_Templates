@@ -3,13 +3,15 @@ package de.uni.koeln.sse.se;
 import java.util.ArrayList;
 
 public class ShoppingBasket {
-	public static Items item_list=new Items();
-	private static Integer totalPrice=0;
+	public static Items item_list=new Items();;
+	private static Integer totalPrice=0;;
 	
 
 	ArrayList<String> MyItems=new ArrayList<String>();
 
 	public ShoppingBasket() {
+		
+		
 
 	}
 	
